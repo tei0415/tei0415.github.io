@@ -1,62 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>てい | Official</title>
-    <style>
-        body {
-            background-color: #050505;
-            color: #d4af37;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 50px;
-            margin: 0;
-        }
-        .container {
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 1.2rem;
-            letter-spacing: 4px;
-            margin-top: 20px;
-            text-transform: uppercase;
-        }
-        .links {
-            margin-top: 30px;
-        }
-        .link-card {
-            display: block;
-            background: #111;
-            border: 1px solid #222;
-            color: #fff;
-            padding: 16px;
-            margin-bottom: 12px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        .link-card:hover {
-            border-color: #d4af37;
-            background: #1a1a1a;
-            transform: translateY(-2px);
-        }
-    </style>
+    <title>てい</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>てい</h1>
-        <div class="links">
-            <a href="#" class="link-card">YouTube</a>
-            <a href="#" class="link-card">Twitter / X</a>
-            <a href="#" class="link-card">Kick</a>
-            <a href="#" class="link-card">Portfolio</a>
-        </div>
+    <!-- Language Switcher -->
+    <div class="lang-switch-container">
+        <button id="lang-btn">EN</button>
     </div>
+
+    <main class="container">
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <img src="profile.jpg" alt="Tei" class="profile-img">
+            <h1 class="title" data-ja="てい" data-en="TEI">てい</h1>
+            <p class="subtitle" data-ja="モト テイスウ" data-en="Moto Teisuu">モト テイスウ</p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="links-section">
+            <a href="#" class="link-btn" data-ja="𝕏 (Twitter)" data-en="𝕏 (Twitter)">𝕏 (Twitter)</a>
+            <a href="#" class="link-btn" data-ja="Instagram" data-en="Instagram">Instagram</a>
+            <a href="#" class="link-btn" data-ja="YouTube" data-en="YouTube">YouTube</a>
+            <a href="mailto:tei0415.jp@gmail.com" class="link-btn" data-ja="✉ メール" data-en="✉ Email">✉ メール</a>
+        </div>
+
+        <!-- Fan Letter Section -->
+        <div class="fan-letter-section">
+            <h2 data-ja="ファンレター" data-en="Fan Letter">ファンレター</h2>
+            <form id="fan-letter-form">
+                <input type="text" id="sender-name" placeholder="名前" required>
+                <textarea id="sender-message" rows="4" placeholder="メッセージ" required></textarea>
+                <button type="submit" class="submit-btn" data-ja="送信する" data-en="Send">送信する</button>
+            </form>
+            <p id="thank-you-msg" class="hidden" data-ja="ありがとうございます！" data-en="Thank you!">ありがとうございます！</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
