@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Oswald:wght@500&display=swap');
+
+:root {
+    --bg-color: #08090c;
+    --text-main: #e0e6ed;
+    --accent-blue: #4a8096; /* Sampled from the image's blue accents */
+    --card-bg: #111217;
+    --border-color: #1f222e;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Language Button */
+.lang-switch-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#lang-btn {
+    background: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    padding: 6px 16px;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+#lang-btn:hover {
+    background: var(--accent-blue);
+    color: var(--bg-color);
+}
+
+/* Main Layout */
+.container {
+    width: 90%;
+    max-width: 450px;
+    padding: 80px 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Profile */
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-blue);
+    box-shadow: 0 0 25px rgba(74, 128, 150, 0.15);
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 6px;
+}
+
+.subtitle {
+    color: var(--accent-blue);
+    letter-spacing: 3px;
+    margin-top: 5px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+/* Links */
+.links-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.link-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.4s ease;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.link-btn:hover {
+    border-color: var(--accent-blue);
+    background: #151821;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* Fan Letter Form */
+.fan-letter-section {
+    width: 100%;
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 3px;
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+}
+
+.fan-letter-section h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: var(--accent-blue);
+    letter-spacing: 2px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 12px;
+    border-radius: 3px;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+.submit-btn {
+    background: var(--accent-blue);
+    color: var(--bg-color);
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #6098af;
+}
+
+.hidden {
+    display: none;
+}
+
+#thank-you-msg {
+    margin-top: 15px;
+    color: var(--accent-blue);
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
