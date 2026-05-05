@@ -27,8 +27,28 @@ langBtn.addEventListener('click', () => {
 const form = document.getElementById('fan-letter-form');
 const thankYouMsg = document.getElementById('thank-you-msg');
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    form.style.display = 'none';
-    thankYouMsg.classList.remove('hidden');
+form.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Stop the default page redirect
+    
+    // Gather the text the fan typed
+    const formData = new FormData(form);
+    
+    // Send it to Formspree silently in the background
+    try {
+        await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        // Hide the form and show the thank you message
+        form.style.display = 'none';
+        thankYouMsg.classList.remove('hidden');
+        
+    } catch (error) {
+        // If their internet drops while sending
+        alert(isEnglish ? "Oops! There was a problem submitting your form." : "エラーが発生しました。もう一度お試しください。");
+    }
 });
