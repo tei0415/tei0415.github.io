@@ -34,9 +34,9 @@
 
         <div class="fan-letter-section">
             <h2 data-ja="ファンレター" data-en="Fan Letter">ファンレター</h2>
-            <form id="fan-letter-form">
-                <input type="text" id="sender-name" placeholder="名前" required>
-                <textarea id="sender-message" rows="4" placeholder="メッセージ" required></textarea>
+            <form id="fan-letter-form" action="https://formspree.io/f/xojrdwen" method="POST">
+                <input type="text" id="sender-name" name="name" placeholder="名前" required>
+                <textarea id="sender-message" name="message" rows="4" placeholder="メッセージ" required></textarea>
                 <button type="submit" class="submit-btn" data-ja="送信する" data-en="Send">送信する</button>
             </form>
             <p id="thank-you-msg" class="hidden" data-ja="ありがとうございます！" data-en="Thank you!">ありがとうございます！</p>
