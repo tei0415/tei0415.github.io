@@ -85,6 +85,22 @@ body {
     font-size: 0.85rem;
 }
 
+.about-section {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+    border-left: 1px solid var(--accent-blue);
+    border-right: 1px solid var(--accent-blue);
+}
+
+.about-text {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: #e0e6ed;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
 /* Links */
 .links-section {
     width: 100%;
